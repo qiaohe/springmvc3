@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>My Page</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="http://code.jquery.com/mobile/1.0/jquery.mobile-1.0.min.css"/>
+    <script type="text/javascript" src="http://code.jquery.com/jquery-1.6.4.min.js"></script>
+    <script type="text/javascript" src="http://code.jquery.com/mobile/1.0/jquery.mobile-1.0.min.js"></script>
+    <script type="text/javascript">
+        $(document).bind('mobileinit', function () {
+            $.mobile.page.prototype.options.addBackBtn = true;
+            $.mobile.page.prototype.options.backBtnText = "Previous";
+            $.mobile.page.prototype.options.backBtnTheme = "b";
+        });
+    </script>
+</head>
+<body>
+
+<div data-role="page" data-add-back-btn="true" data-back-btn-text="Previous">
+
+    <div data-role="header">
+        <h1>New Page</h1>
+    </div>
+    <!-- /header -->
+
+    <div data-role="content">
+        <ul data-role="listview" data-inset="true" data-filter="true">
+            <li><a href="#">Acura</a></li>
+            <li><a href="#">Audi</a></li>
+            <li><a href="#">BMW</a></li>
+            <li><a href="#">Cadillac</a></li>
+
+        </ul>
+        <label for="genre">Genre:</label> <select name="genre" id="genre">
+        <option value="action">Action</option>
+        <option value="comedy">Comedy</option>
+        <option value="drama">Drama</option>
+        <select name="slider" id="alerts" data-role="slider">
+            <option value="off">Off</option>
+            <option value="on">On</option>
+        </select>
+    </select>
+    </div>
+    <!-- /content -->
+    <div data-role="footer" data-position="fixed">
+        <div data-role="navbar">
+            <ul>
+                <li><a href="#" data-icon="home">Home</a></li>
+                <li><a href="#" data-icon="star" class="ui-btn-active">
+                    Movies</a></li>
+                <li><a href="#" data-icon="grid">Theatres</a></li>
+            </ul>
+        </div>
+    </div>
+</div>
+<!-- /page -->
+
+</body>
+</html>
